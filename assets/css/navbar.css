@@ -1,0 +1,205 @@
+html {
+    background-image: url("/assets/images/bg.png");
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Adjust background color as needed */
+    z-index: 1000;
+    /* Ensure the navbar stays on top of other content */
+}
+
+#navlogo {
+    width: 180px;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 60px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 30px;
+    /* Adjust the margin here for more space */
+    position: relative;
+    /* Add position relative for button positioning */
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    /* Adjust as per your design */
+    position: relative;
+    /* Add position relative for pseudo-element positioning */
+    z-index: 1;
+    /* Ensure the text is above the background */
+    transition: color 0.3s ease;
+    /* Add transition for text color change */
+}
+
+nav ul li a::before {
+    content: '';
+    /* Unicode right arrow */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+    /* Add transition for arrow animation */
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #f6b737;
+    /* Fill color */
+    border-radius: 25px;
+    /* Rounded rectangle */
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+    /* Add transition for animation */
+    z-index: 0;
+    /* Ensure it's behind the text */
+    transform: translate(-50%, -50%);
+    /* Center the animation */
+    opacity: 0;
+    /* Initially hide the animation */
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 20px);
+    /* Adjust width for arrow */
+    height: 150%;
+    opacity: 1;
+    /* Show the animation on hover */
+}
+
+nav ul li:hover a {
+    color: #000;
+    /* Change text color to black on hover */
+}
+
+nav ul li:hover a::before {
+    opacity: 1;
+    /* Show arrow on hover */
+    right: 10px;
+    /* Adjust position of arrow */
+}
+
+.menu-icon {
+    display: none;
+    /* Initially hide the menu icon */
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-line:last-child {
+    margin-bottom: 0;
+}
+
+.menu-icon {
+    display: none;
+    /* Initially hide the menu icon */
+    cursor: pointer;
+    margin-right: 30px;
+    /* Same right margin as nav buttons */
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 30px;
+    }
+
+    nav ul li {
+
+        width: 100%;
+        text-align: center;
+        margin: 4px;
+        /* Adjust margin for buttons */
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        color: #000;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li:hover a {
+        animation: none;
+        color: #f6b737;
+    }
+
+    /* Hamburger Menu Animation */
+    .menu-icon.active .menu-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-icon.active .menu-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .menu-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Adjust background color as needed */
+    z-index: 1000;
+    /* Ensure the navbar stays on top of other content */
+}

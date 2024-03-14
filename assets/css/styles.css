@@ -1,0 +1,113 @@
+html {
+    background-image: url("/assets/images/bg.png");
+}
+
+/* Your existing CSS */
+
+.first-section {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.enroll {
+    text-align: center;
+}
+
+.photo-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 50%;
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Adjust carousel width as needed */
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    /* Ensure images fill the carousel */
+    height: auto;
+}
+
+/* Add this CSS to your existing styles.css file or create a new one */
+
+/* For the small-carousel */
+.small-carousel img {
+    width: 100px;
+    /* Set the width as per your requirement */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* For the photo-carousel */
+.photo-carousel img {
+    width: 150px;
+    /* Set the width as per your requirement */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+/* Clearfix for the container to prevent collapsing */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Add this CSS to your existing styles.css file or create a new one */
+
+/* For the left-half and right-half */
+.left-half,
+.right-half {
+    width: 50%;
+    float: right;
+    /* Float elements to left to make them side by side */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+}
+
+/* Your existing CSS */
+
+.left-half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-half,
+.lower-half {
+    flex: 1;
+    /* Make both halves take up equal space */
+}
+
+#video {
+    height: 600px;
+}
