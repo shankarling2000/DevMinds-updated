@@ -41,7 +41,7 @@ nav ul li {
 }
 
 nav ul li:last-child {
-    margin-right: 0;
+    margin-right: 60px;
     /* Remove margin from the last item */
 }
 
@@ -157,7 +157,7 @@ nav ul li:hover a::before {
 
     .menu-icon {
         display: block;
-        margin-right: 30px;
+        margin-right: 60px;
     }
 
     nav ul li {
@@ -202,4 +202,11 @@ header {
     /* Adjust background color as needed */
     z-index: 1000;
     /* Ensure the navbar stays on top of other content */
+}
+
+/* Add this style to change navbar background when scrolled */
+header.scrolled {
+    border: #ffc400 1px solid;
+    background-image: url("/assets/images/bg.png");
+    /* Change background color as needed */
 }

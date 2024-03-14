@@ -15,7 +15,7 @@ html {
     padding: 50px 0;
 }
 
-.container {
+.container1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@ html {
 
 
 /* Clearfix for the container to prevent collapsing */
-.container::after {
+.container1::after {
     content: "";
     display: table;
     clear: both;
@@ -97,7 +97,7 @@ html {
 /* Your existing CSS */
 
 .left-half {
-    width: 50%;
+    width: 55%;
     display: flex;
     flex-direction: column;
 }
@@ -105,9 +105,28 @@ html {
 .upper-half,
 .lower-half {
     flex: 1;
+
     /* Make both halves take up equal space */
 }
 
-#video {
-    height: 600px;
+
+.enroll {
+    line-height: 40%;
+    margin-bottom: none;
+    text-align: left;
+    font-size: 300%;
+}
+
+#sectionhead {
+    color: #f5b639
+}
+
+.lower-half {
+    margin-left: 0px;
+    display: flex;
+    /* Use flexbox */
+    justify-content: left;
+    /* Center content horizontally */
+    align-items: left;
+
 }

@@ -1,0 +1,69 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    height: 550px;
+    margin-left: 50px;
+    margin-right: none;
+    /* Adjust the height as needed */
+}
+
+.carousel-slide img {
+    width: auto;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-navigation input {}
+
+.radio-buttons-container {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    /* Adjust as needed */
+}
+
+.radio-buttons-container label {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.radio-buttons-container label:hover {
+    background-color: #fff;
+}
+
+.carousel-navigation label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-navigation input:checked+label {
+    background-color: #fff;
+
+}
